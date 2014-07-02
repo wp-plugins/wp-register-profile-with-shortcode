@@ -21,7 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Enable password fields so that users can choose there own passwords.
 * Enable some additional fields like first name, last name, display name, user url etc..
 
->
+>>
 = WP Register Profile PRO =
 There is a PRO version of this plugin that supports more feathres like. 
 
