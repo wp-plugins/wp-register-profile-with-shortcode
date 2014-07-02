@@ -22,7 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Enable some additional fields like first name, last name, display name, user url etc..
 
 
-> 
+
 = WP Register Profile PRO =
 There is a PRO version of this plugin that supports more feathres like. 
 
@@ -34,7 +34,7 @@ There is a PRO version of this plugin that supports more feathres like.
 * Profile image can be used as avatar. If this is enabled then profile image will be used as user avatar throughout the site. When user posts a comment his profile image will be displayed instead of the defalut wordpress avatar.
 
 You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
->
+
 
 == Installation ==
 
