@@ -21,6 +21,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Enable password fields so that users can choose there own passwords.
 * Enable some additional fields like first name, last name, display name, user url etc..
 
+>>
+= WP Register Profile PRO =
+There is a PRO version of this plugin that supports more feathres like. 
+
+* Regstration form with support for adding custom fields.
+* User Profile page with custom fields. Here users can update their profile data.
+* User password update.
+* User profile data can be displayed easily with the help of shortcodes.
+* Support for user profile image upload.
+* Profile image can be used as avatar. If this is enabled then profile image will be used as user avatar throughout the site. When user posts a comment his profile image will be displayed instead of the defalut wordpress avatar.
+
+You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
+>>
 
 == Installation ==
 
