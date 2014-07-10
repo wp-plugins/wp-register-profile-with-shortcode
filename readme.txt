@@ -1,7 +1,7 @@
 === WP Register Profile With Shortcode ===
 Contributors: avimegladon
 Donate link: aviplugins.com/donate
-Tags: register, wp register, profile, register widget, widget, uer register, register user, responsive form, responsive register form,
+Tags: register, wp register, profile, register widget, widget, user register, register user, responsive form, responsive register form, custom fields, profile image, date, time, user image, custom profile fields, profile data
 Requires at least: 2.0.2
 Tested up to: 3.8.1
 Stable tag: 1.0.1
