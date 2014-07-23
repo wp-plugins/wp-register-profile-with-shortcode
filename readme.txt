@@ -35,6 +35,8 @@ There is a PRO version of this plugin that supports more feathres like.
 
 You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
 
+= Get Quote =
+Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Custom Plugin, for Customizing a Plugin and for customizing wordpress themes.
 
 == Installation ==
 
@@ -57,7 +59,8 @@ Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Cus
 1. Please email me avi.megladon@gmail.com. My site is http://avifoujdar.wordpress.com/contact/ 
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/
 
-
+= Get Quote =
+Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Custom Plugin, for Customizing a Plugin and for customizing wordpress themes.
 
 
 == Screenshots ==
