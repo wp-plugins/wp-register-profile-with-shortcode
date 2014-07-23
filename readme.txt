@@ -46,6 +46,9 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 5. You can also use shortcodes to insert login form in post or pages. [rp_register_widget title="User Registration"]
 5. Now visit your blog and you will see the registration form section.
 
+=Get Quote=
+<a href="http://aviplugins.com/get-quote.php">Get a quote</a> for creating a custom plugin or customizing a plugin.
+
 
 
 
