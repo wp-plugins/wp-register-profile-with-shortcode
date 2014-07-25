@@ -35,8 +35,7 @@ There is a PRO version of this plugin that supports more feathres like.
 
 You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
 
-
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a <strong>Custom</strong> Plugin and for <strong>Customizing</strong> plugins.
+> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a <strong>Custom</strong> Plugin.
 
 == Installation ==
 
@@ -48,7 +47,6 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 5. You can also use shortcodes to insert login form in post or pages. [rp_register_widget title="User Registration"]
 5. Now visit your blog and you will see the registration form section.
 
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a <strong>Custom</strong> Plugin and for <strong>Customizing</strong> plugins.
 
 == Frequently Asked Questions ==
 
@@ -56,8 +54,6 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 
 1. Please email me avi.megladon@gmail.com. My site is http://avifoujdar.wordpress.com/contact/ 
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/
-
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a <strong>Custom</strong> Plugin and for <strong>Customizing</strong> plugins.
 
 
 == Screenshots ==
