@@ -4,7 +4,7 @@ Donate link: aviplugins.com/donate
 Tags: register, wp register, profile, register widget, widget, user register, register user, responsive form, responsive register form, custom fields, profile image, date, time, user image, custom profile fields, profil data
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 1.0.1
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 
 
 == Changelog ==
+
+= 1.2.1 =
+* admin menu related bug fixed.
 
 = 1.0.1 =
 * this is the first release.

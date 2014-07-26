@@ -175,7 +175,7 @@ class register_settings {
 	<?php }
 	
 	function register_widget_afo_menu () {
-		add_options_page( 'Register Widget', 'WP Register Settings', 1, 'register_widget_afo', array( $this,'register_widget_afo_options' ));
+		add_options_page( 'Register Widget', 'WP Register Settings', 10, 'register_widget_afo', array( $this,'register_widget_afo_options' ));
 	}
 	
 	function load_settings(){
