@@ -52,7 +52,7 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 
 = For any kind of problem =
 
-1. Please email me avi.megladon@gmail.com. My site is http://avifoujdar.wordpress.com/contact/ 
+1. Please email me demoforafo@gmail.com. Plugin site is http://aviplugins.com/ 
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/
 
 
