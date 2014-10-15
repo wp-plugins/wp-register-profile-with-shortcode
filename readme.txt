@@ -56,9 +56,7 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 
 == Frequently Asked Questions ==
 
-= For any kind of problem =
-
-1. Please email me at demoforafo@gmail.com for any queries or Contact me here http://aviplugins.com/contact.php
+1. Please email me at demoforafo@gmail.com for any queries or Contact me here http://aviplugins.com/support.php
 
 == Screenshots ==
 
