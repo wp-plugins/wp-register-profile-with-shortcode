@@ -34,6 +34,7 @@ There is a PRO version of this plugin that supports more feathres like.
 
 * Regstration form with support for adding custom fields.
 * User Profile page with custom fields. Here users can update their profile data.
+* Create file type fields for Registration and Profile forms. Users can upload files to their profile. Uploadable file types can be selected form plugin settings page.
 * User password update.
 * User profile data can be displayed easily with the help of shortcodes.
 * Support for user profile image upload.
