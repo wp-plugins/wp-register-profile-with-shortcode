@@ -17,10 +17,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 * Change some 'optional' settings in `Settings-> WP Register Settings` and you are good to go. 
 
 = Shortcodes =
-1. Use this [rp_register_widget] shortcode to display registration form in post or page.
-2. Use This shortcode to retrieve user data [rp_user_data field="first_name" user_id="2"]. user_id can be blank. if blank then the data is retrieve from currently loged in user.
-3. Use this [rp_profile_edit] shortcode for user profile page. Logged in usres can edit profile data from this page.
-4. Use this [rp_update_password] shortcode to display Update Password form in your page.
+1. Use this <strong>[rp_register_widget]</strong> shortcode to display registration form in post or page.
+2. Use This shortcode to retrieve user data <strong>[rp_user_data field="first_name" user_id="2"]</strong>. user_id can be blank. if blank then the data is retrieve from currently loged in user.
+3. Use this <strong>[rp_profile_edit]</strong> shortcode for user profile page. Logged in usres can edit profile data from this page.
+4. Use this <strong>[rp_update_password]</srong> shortcode to display Update Password form in your page.
 
 = Other Optional Options =
 * You can choose the redirect page after successfull registration. Maybe to a thankyou page.
