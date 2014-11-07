@@ -201,6 +201,10 @@ class register_settings {
 	</form>
 	<?php }
 	
+	function wp_register_profile_text_domain(){
+		load_plugin_textdomain('rwa', FALSE, basename( dirname( __FILE__ ) ) .'/languages');
+	}
+	
 	function register_widget_afo_menu () {
 		add_options_page( 'Register Widget', 'WP Register Settings', 10, 'register_widget_afo', array( $this,'register_widget_afo_options' ));
 	}
@@ -210,6 +214,7 @@ class register_settings {
 		add_action( 'admin_init', array( $this, 'register_widget_afo_save_settings' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
+		add_action( 'plugins_loaded',  array( $this, 'wp_register_profile_text_domain' ) );
 	}
 	
 	public function register_plugin_styles() {

@@ -6,7 +6,7 @@ class register_wid extends WP_Widget {
 		parent::__construct(
 	 		'register_wid',
 			'Register Widget AFO',
-			array( 'description' => __( 'This is a simple register form in the widget.', 'text_domain' ), )
+			array( 'description' => __( 'This is a simple register form in the widget.', 'rwa' ), )
 		);
 		add_action( 'init', array($this, 'register_validate' ) );
 	 }
@@ -71,65 +71,65 @@ class register_wid extends WP_Widget {
 		<div id="reg_forms">
 			
 			<div>
-			<label for="name">Username </label>
-			<div><input type="text" name="user_login" required="required" placeholder="Username"/></div>
+			<label for="name"><?php _e('Username','rwa');?> </label>
+			<div><input type="text" name="user_login" required="required" placeholder="<?php _e('Username','rwa');?>"/></div>
 			</div>
 			
 			<div>
-			<label for="name">User Email </label>
-			<div><input type="email" name="user_email" required="required" placeholder="User Email"/></div>
+			<label for="name"><?php _e('User Email','rwa');?> </label>
+			<div><input type="email" name="user_email" required="required" placeholder="<?php _e('User Email','rwa');?>"/></div>
 			</div>
 			
 			<?php if($this->is_field_enabled('password_in_registration')){ ?>
 			<div>
-			<label for="name">Password </label>
-			<div><input type="password" name="new_user_password" required="required" placeholder="Password" /></div>
+			<label for="name"><?php _e('Password','rwa');?> </label>
+			<div><input type="password" name="new_user_password" required="required" placeholder="<?php _e('Password','rwa');?>" /></div>
 			</div>
 			
 			<div>
-			<label for="name">Retype Password </label>
-			<div><input type="password" name="re_user_password" required="required" placeholder="Retype Password"/></div>
+			<label for="name"><?php _e('Retype Password','rwa');?> </label>
+			<div><input type="password" name="re_user_password" required="required" placeholder="<?php _e('Retype Password','rwa');?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('firstname_in_registration')){ ?>
 			<div>
-			<label for="name">First Name </label>
-			<div><input type="text" name="first_name" <?php echo $this->is_field_required('is_firstname_required');?> placeholder="First Name"/></div>
+			<label for="name"><?php _e('First Name','rwa');?> </label>
+			<div><input type="text" name="first_name" <?php echo $this->is_field_required('is_firstname_required');?> placeholder="<?php _e('First Name','rwa');?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('lastname_in_registration')){ ?>
 			<div>
-			<label for="name">Last Name </label>
-			<div><input type="text" name="last_name" <?php echo $this->is_field_required('is_lastname_required');?> placeholder="Last Name"/></div>
+			<label for="name"><?php _e('Last Name','rwa');?> </label>
+			<div><input type="text" name="last_name" <?php echo $this->is_field_required('is_lastname_required');?> placeholder="<?php _e('Last Name','rwa');?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('displayname_in_registration')){ ?>
 			<div>
-			<label for="name">Display Name </label>
-			<div><input type="text" name="display_name" <?php echo $this->is_field_required('is_displayname_required');?> placeholder="Display Name"/></div>
+			<label for="name"><?php _e('Display Name','rwa');?> </label>
+			<div><input type="text" name="display_name" <?php echo $this->is_field_required('is_displayname_required');?> placeholder="<?php _e('Display Name','rwa');?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userdescription_in_registration')){ ?>
 			<div>
-			<label for="name">About User </label>
+			<label for="name"><?php _e('About User','rwa');?> </label>
 			<div><textarea name="description" <?php echo $this->is_field_required('is_userdescription_required');?>></textarea></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userurl_in_registration')){ ?>
 			<div>
-			<label for="name">Website </label>
-			<div><input type="url" name="user_url" <?php echo $this->is_field_required('is_userurl_required');?> placeholder="User URL"/></div>
+			<label for="name"><?php _e('Website','rwa');?> </label>
+			<div><input type="url" name="user_url" <?php echo $this->is_field_required('is_userurl_required');?> placeholder="<?php _e('Website','rwa');?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<div>
 			<div>
-			<input name="register" type="submit" value="Register" />
+			<input name="register" type="submit" value="<?php _e('Register','rwa');?>" />
 			</div>
 			</div>
 
@@ -138,7 +138,7 @@ class register_wid extends WP_Widget {
 
 		<?php 
 		} else {
-			echo '<div id="reg_forms"><p>Sorry. Registration is not allowed in this site.</p></div>';
+			echo '<div id="reg_forms"><p>'.__('Sorry. Registration is not allowed in this site.','rwa').'</p></div>';
 		}
 		} 
 	}
@@ -162,18 +162,21 @@ class register_wid extends WP_Widget {
 			$error = false;
 			
 			if ( username_exists( $_POST['user_login'] ) ){
-				$msg .= "Username already exists. Please use a different one!";
+				$msg .= __('Username already exists. Please use a different one!','rwa');
+				$msg .= '</br>';
 				$error = true;
 			}
 			
 			if( email_exists( $_POST['user_email'] )) {
-				$msg .= "Email already exists. Please use a different one!<br>";
+				$msg .= __('Email already exists. Please use a different one!','rwa');
+				$msg .= '</br>';
 				$error = true;
 			}
 			
 			if($this->is_field_enabled('password_in_registration')){ 
 				if($_POST['new_user_password'] != $_POST['re_user_password']){
-					$msg .= "Password and Retype password donot match!<br>";
+					$msg .= __('Password and Retype password donot match!','rwa');
+					$msg .= '</br>';
 					$error = true;
 				}
 			}
@@ -234,7 +237,7 @@ class register_wid extends WP_Widget {
 				remove_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
 				// send mail to user //
 				
-				$_SESSION['reg_error_msg'] = "You are successfully registered to the site. Please check your email for login details.";
+				$_SESSION['reg_error_msg'] = __('You are successfully registered to the site. Please check your email for login details.','rwa');
 				$_SESSION['reg_msg_class'] = 'reg_success';
 				
 				

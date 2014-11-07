@@ -4,7 +4,7 @@ Donate link: aviplugins.com/donate
 Tags: register, wp register, profile, register widget, widget, user register, register user, responsive form, responsive register form, custom fields, profile image, date, time, user image, custom profile fields, profil data
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,8 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 5. You can also use shortcodes to insert registration form in post or pages. [rp_register_widget title="User Registration"]
 5. Now visit your blog and you will see the registration form section.
 
+If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/rwa-es_ES.po" target="_blank">here</a>
+
 
 == Frequently Asked Questions ==
 
@@ -66,6 +68,9 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 
 
 == Changelog ==
+
+= 2.1.0 =
+* The plugin is now Multilingual.
 
 = 1.2.1 =
 * admin menu related bug fixed.

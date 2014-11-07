@@ -100,53 +100,53 @@ class profile_edit_afo{
 		<div id="reg_forms">
 			
 			<div>
-			<label for="name">Username </label>
+			<label for="name"><?php _e('Username','rwa');?> </label>
 			<div><input type="text" required="required" value="<?php echo $current_user->user_login;?>" disabled="disabled"/></div>
 			</div>
 			
 			<div>
-			<label for="name">User Email </label>
+			<label for="name"><?php _e('User Email','rwa');?> </label>
 			<div><input type="email" value="<?php echo $current_user->user_email;?>" disabled="disabled"/></div>
 			</div>
 		
 			<?php if($this->is_field_enabled('firstname_in_profile')){ ?>
 			<div>
-			<label for="name">First Name </label>
+			<label for="name"><?php _e('First Name','rwa');?> </label>
 			<div><input type="text" name="first_name" <?php echo $this->is_field_required('is_firstname_required');?> placeholder="First Name" value="<?php echo $current_user->first_name;?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('lastname_in_profile')){ ?>
 			<div>
-			<label for="name">Last Name </label>
+			<label for="name"><?php _e('Last Name','rwa');?> </label>
 			<div><input type="text" name="last_name" <?php echo $this->is_field_required('is_lastname_required');?> placeholder="Last Name" value="<?php echo $current_user->last_name;?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('displayname_in_profile')){ ?>
 			<div>
-			<label for="name">Display Name </label>
+			<label for="name"><?php _e('Display Name','rwa');?> </label>
 			<div><input type="text" name="display_name" <?php echo $this->is_field_required('is_displayname_required');?> placeholder="Display Name" value="<?php echo $current_user->display_name;?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userdescription_in_profile')){ ?>
 			<div>
-			<label for="name">About User </label>
+			<label for="name"><?php _e('About User','rwa');?> </label>
 			<div><textarea name="description" <?php echo $this->is_field_required('is_userdescription_required');?>><?php echo get_the_author_meta( 'description', $user_id );?></textarea></div>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userurl_in_profile')){ ?>
 			<div>
-			<label for="name">Website </label>
+			<label for="name"><?php _e('Website','rwa');?> </label>
 			<div><input type="url" name="user_url" <?php echo $this->is_field_required('is_userurl_required');?> placeholder="User URL" value="<?php echo get_the_author_meta( 'user_url', $user_id );?>"/></div>
 			</div>
 			<?php } ?>
 			
 			<div>
 			<div>
-			<input name="profile" type="submit" value="Update" />
+			<input name="profile" type="submit" value="<?php _e('Update','rwa');?>" />
 			</div>
 			</div>
 
@@ -185,12 +185,12 @@ class update_password_afo{
 			$error = false;
 			
 			if(!is_user_logged_in()){
-				$msg = 'Login to update profile!';
+				$msg = __('Login to update profile!','rwa');
 				$error = true;
 			}
 			
 			if($_POST['user_new_password'] != $_POST['user_retype_password']){
-				$msg = 'Your new password dont match with retype password!';
+				$msg = __('Your new password dont match with retype password!','rwa');
 				$error = true;
 			}
 						
@@ -198,7 +198,7 @@ class update_password_afo{
 				$user_id = get_current_user_id();
 				wp_set_password( $_POST['user_new_password'], $user_id );
 				
-				$_SESSION['reg_error_msg'] = "Youe password updated successfully.";
+				$_SESSION['reg_error_msg'] = __('Your password updated successfully.','rwa');
 				$_SESSION['reg_msg_class'] = 'reg_success';
 				
 			} else {
@@ -221,18 +221,18 @@ class update_password_afo{
 		<div id="reg_forms">
 			
 			<div>
-			<label for="name">New Password </label>
+			<label for="name"><?php _e('New Password','rwa');?> </label>
 			<div><input type="password" name="user_new_password" required="required"/></div>
 			</div>
 			
 			<div>
-			<label for="name">Retype Password </label>
+			<label for="name"><?php _e('Retype Password','rwa');?> </label>
 			<div><input type="password" name="user_retype_password" required="required" /></div>
 			</div>
 			
 			<div>
 			<div>
-			<input name="profile" type="submit" value="Update" />
+			<input name="profile" type="submit" value="<?php _e('Update','rwa');?>" />
 			</div>
 			</div>
 
@@ -327,7 +327,7 @@ function get_user_data_afo( $atts ) {
 	 if(!$error){
 	 	$ret = get_the_author_meta( $atts['field'], $user_id );
 	 } else {
-	 	$ret = 'Sorry. no user was found!';
+	 	$ret = __('Sorry. no user was found!','rwa');
 	 }
 		
 	 return $ret;
