@@ -54,6 +54,8 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 5. You can also use shortcodes to insert registration form in post or pages. [rp_register_widget title="User Registration"]
 5. Now visit your blog and you will see the registration form section.
 
+The Serbo-Croatian Language translation file is provided by <a href="http://www.webhostinghub.com" target="_blank">Web Hosting Hub</a> 
+
 If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/rwa-es_ES.po" target="_blank">here</a>
 
 
