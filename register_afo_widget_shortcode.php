@@ -30,7 +30,7 @@ class profile_edit_afo{
 			@session_start();
 		}
 		
-		if($_POST['option'] == "afo_user_edit_profile"){
+		if(isset($_POST['option']) and $_POST['option'] == "afo_user_edit_profile"){
 			global $post;
 			$error = false;
 			
@@ -161,7 +161,7 @@ class profile_edit_afo{
 			@session_start();
 		}
 		
-		if($_SESSION['reg_error_msg']){
+		if(isset($_SESSION['reg_error_msg']) and $_SESSION['reg_error_msg']){
 			echo '<div class="'.$_SESSION['reg_msg_class'].'">'.$_SESSION['reg_error_msg'].'</div>';
 			unset($_SESSION['reg_error_msg']);
 			unset($_SESSION['reg_msg_class']);
@@ -180,7 +180,7 @@ class update_password_afo{
 	 	 
 
 	function update_password_validate(){
-		if($_POST['option'] == "afo_user_update_password"){
+		if(isset($_POST['option']) and $_POST['option'] == "afo_user_update_password"){
 			global $post;
 			$error = false;
 			
@@ -243,7 +243,7 @@ class update_password_afo{
 	}
 	
 	public function error_message(){
-		if($_SESSION['reg_error_msg']){
+		if(isset($_SESSION['reg_error_msg']) and $_SESSION['reg_error_msg']){
 			echo '<div class="'.$_SESSION['reg_msg_class'].'">'.$_SESSION['reg_error_msg'].'</div>';
 			unset($_SESSION['reg_error_msg']);
 			unset($_SESSION['reg_msg_class']);

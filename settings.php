@@ -6,7 +6,7 @@ class register_settings {
 	}
 	
 	function register_widget_afo_save_settings(){
-		if($_POST['option'] == "register_widget_afo_save_settings"){
+		if(isset($_POST['option']) and $_POST['option'] == "register_widget_afo_save_settings"){
 			
 			update_option( 'thank_you_page_after_registration_url', $_POST['thank_you_page_after_registration_url'] );
 			
@@ -41,7 +41,7 @@ class register_settings {
 	
 	
 	private function error_message(){
-		if($_SESSION['msg']){
+		if(isset($_SESSION['msg']) and $_SESSION['msg']){
 			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].'</div>';
 			unset($_SESSION['msg']);
 			unset($_SESSION['msg_class']);
@@ -206,7 +206,7 @@ class register_settings {
 	}
 	
 	function register_widget_afo_menu () {
-		add_options_page( 'Register Widget', 'WP Register Settings', 10, 'register_widget_afo', array( $this,'register_widget_afo_options' ));
+		add_options_page( 'Register Widget', 'WP Register Settings', 'activate_plugins', 'register_widget_afo', array( $this,'register_widget_afo_options' ));
 	}
 	
 	function load_settings(){

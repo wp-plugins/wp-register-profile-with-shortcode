@@ -145,7 +145,7 @@ class register_wid extends WP_Widget {
 	
 	
 	public function error_message(){
-		if($_SESSION['reg_error_msg']){
+		if(isset($_SESSION['reg_error_msg']) and $_SESSION['reg_error_msg']){
 			echo '<div class="'.$_SESSION['reg_msg_class'].'">'.$_SESSION['reg_error_msg'].'</div>';
 			unset($_SESSION['reg_error_msg']);
 			unset($_SESSION['reg_msg_class']);
@@ -157,9 +157,10 @@ class register_wid extends WP_Widget {
 	}
 				
 	public function register_validate(){
-		if($_POST['option'] == "afo_user_register"){
+		if(isset($_POST['option']) and $_POST['option'] == "afo_user_register"){
 			global $post;
 			$error = false;
+			$msg = '';
 			
 			if ( username_exists( $_POST['user_login'] ) ){
 				$msg .= __('Username already exists. Please use a different one!','rwa');
@@ -174,7 +175,7 @@ class register_wid extends WP_Widget {
 			}
 			
 			if($this->is_field_enabled('password_in_registration')){ 
-				if($_POST['new_user_password'] != $_POST['re_user_password']){
+				if(isset($_POST['new_user_password']) and ($_POST['new_user_password'] != $_POST['re_user_password'])){
 					$msg .= __('Password and Retype password donot match!','rwa');
 					$msg .= '</br>';
 					$error = true;

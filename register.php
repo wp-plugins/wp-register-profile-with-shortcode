@@ -3,7 +3,7 @@
 Plugin Name: WP Register Profile
 Plugin URI: http://aviplugins.com/
 Description: This is a simple registration form in the widget. just install the plugin and add the register widget in the sidebar. Thats it. :)
-Version: 2.1.0
+Version: 2.1.1
 Author: avimegladon
 Author URI: http://avifoujdar.wordpress.com/
 */
