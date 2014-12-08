@@ -189,7 +189,7 @@ class update_password_afo{
 				$error = true;
 			}
 			
-			if($_POST['user_new_password'] != $_POST['user_retype_password']){
+			if(isset($_POST['user_new_password']) and ($_POST['user_new_password'] != $_POST['user_retype_password'])){
 				$msg = __('Your new password dont match with retype password!','rwa');
 				$error = true;
 			}

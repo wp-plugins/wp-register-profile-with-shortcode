@@ -62,10 +62,7 @@ class register_wid extends WP_Widget {
 
 		$this->error_message();
 		if(!is_user_logged_in()){
-		
-		if(get_option('users_can_register')) {  
 		?>
-		
 		<form name="register" id="register" method="post" action="" enctype="multipart/form-data">
 		<input type="hidden" name="option" value="afo_user_register" />
 		<div id="reg_forms">
@@ -127,6 +124,8 @@ class register_wid extends WP_Widget {
 			</div>
 			<?php } ?>
 			
+			<?php do_action('wp_register_profile_subscription'); ?>
+			
 			<div>
 			<div>
 			<input name="register" type="submit" value="<?php _e('Register','rwa');?>" />
@@ -140,7 +139,6 @@ class register_wid extends WP_Widget {
 		} else {
 			echo '<div id="reg_forms"><p>'.__('Sorry. Registration is not allowed in this site.','rwa').'</p></div>';
 		}
-		} 
 	}
 	
 	
@@ -155,12 +153,40 @@ class register_wid extends WP_Widget {
 	public function set_html_content_type() {
 		return 'text/html';
 	}
+	
+	public function create_user($data){
+		$userdata = $data['userdata'];
+		
+		// insert new user in db //
+			$user_id = wp_insert_user( $userdata ) ;
+		// insert new user in db //
+		
+		// send mail to user //
+		$subject = 'Registration Successfull';
+		$body = 'Thankyou for registration<br><br>
+		
+				Username : '.$userdata['user_login'].'<br>
+				Password : '.$userdata['user_pass'].'<br>
+				Site Link : '.site_url().'<br>
+		';
+		
+		
+		$to_array = array($_POST['user_email']);
+		add_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
+		wp_mail( $to_array, $subject, $body );
+		remove_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
+		// send mail to user //
+		
+		$_SESSION['reg_error_msg'] = __('You are successfully registered to the site. Please check your email for login details.','rwa');
+		$_SESSION['reg_msg_class'] = 'reg_success';
+		
+		return $user_id;
+	}
 				
 	public function register_validate(){
 		if(isset($_POST['option']) and $_POST['option'] == "afo_user_register"){
 			global $post;
 			$error = false;
-			$msg = '';
 			
 			if ( username_exists( $_POST['user_login'] ) ){
 				$msg .= __('Username already exists. Please use a different one!','rwa');
@@ -175,7 +201,7 @@ class register_wid extends WP_Widget {
 			}
 			
 			if($this->is_field_enabled('password_in_registration')){ 
-				if(isset($_POST['new_user_password']) and ($_POST['new_user_password'] != $_POST['re_user_password'])){
+				if($_POST['new_user_password'] != $_POST['re_user_password']){
 					$msg .= __('Password and Retype password donot match!','rwa');
 					$msg .= '</br>';
 					$error = true;
@@ -217,40 +243,27 @@ class register_wid extends WP_Widget {
 					$userdata['user_url'] = $_POST['user_url'];
 				} 
 				
-				// insert new user in db //
-					$user_id = wp_insert_user( $userdata ) ;
-				// insert new user in db //
-			
-				
-				// send mail to user //
-				$subject = 'Registration Successfull';
-				$body = 'Thankyou for registration<br><br>
-				
-						Username : '.$_REQUEST['user_login'].'<br>
-						Password : '.$new_pass.'<br>
-						Site Link : '.site_url().'<br>
-				';
-				
-				
-				$to_array = array($_POST['user_email']);
-				add_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
-				wp_mail( $to_array, $subject, $body );
-				remove_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
-				// send mail to user //
-				
-				$_SESSION['reg_error_msg'] = __('You are successfully registered to the site. Please check your email for login details.','rwa');
-				$_SESSION['reg_msg_class'] = 'reg_success';
-				
-				
-				$redirect_page = get_option('thank_you_page_after_registration_url');
-				if($redirect_page){
-					$redirect =  get_permalink($redirect_page);
+				if(get_option('enable_subscription') == 'Yes'){
+					$_SESSION['wp_register_subscription']['userdata'] = $userdata;
+					$_SESSION['wp_register_subscription']['sub_type'] = $_REQUEST['sub_type'];
+					$redirect_page = get_permalink(get_option('subscription_page'));
+					wp_redirect($redirect_page);
+					exit;
 				} else {
-					$redirect =  get_permalink($post->ID);
+					$create_user_data['userdata'] = $userdata;
+					$user_id = $this->create_user($create_user_data);
+					$_SESSION['reg_error_msg'] = __('You are successfully registered to the site. Please check your email for login details.','rwa');
+					$_SESSION['reg_msg_class'] = 'reg_success';
+					
+					$redirect_page = get_option('thank_you_page_after_registration_url');
+					if($redirect_page){
+						$redirect =  get_permalink($redirect_page);
+					} else {
+						$redirect =  get_permalink($post->ID);
+					}
+					wp_redirect($redirect);
+					exit;
 				}
-				wp_redirect($redirect);
-				exit;
-				
 			} else {
 				$_SESSION['reg_error_msg'] = $msg;
 				$_SESSION['reg_msg_class'] = 'reg_error';

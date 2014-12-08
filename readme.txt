@@ -3,8 +3,8 @@ Contributors: avimegladon
 Donate link: aviplugins.com/donate
 Tags: register, wp register, profile, register widget, widget, user register, register user, responsive form, responsive register form, custom fields, profile image, date, time, user image, custom profile fields, profil data
 Requires at least: 2.0.2
-Tested up to: 3.8.1
-Stable tag: 2.1.1
+Tested up to: 4.0.1
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 = WP Register Profile PRO =
-There is a PRO version of this plugin that supports more feathres like. 
+There is a <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">PRO</a> version of this plugin that supports more feathres like. 
 
 * Regstration form with support for adding custom fields.
 * User Profile page with custom fields. Here users can update their profile data.
@@ -42,7 +42,18 @@ There is a PRO version of this plugin that supports more feathres like.
 
 You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
 
-> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
+= WP User Subscription =
+Get paid when user registers in your site. <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">WP User Subscription</a> plugin can be used with <a target="_blank" href="https://wordpress.org/plugins/wp-register-profile-with-shortcode/">WP Register Profile With Shortcode</a>, <a target="_blank" href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a> or separetly or with other plugins also.
+
+* Create Subscription Packages for users. Create Paid/ Free packages with validity of the package. 
+* Display subscription package using Shortcodes.
+* Let users subscribe for Paid/ Free Subscription Packages at the time of registration. Users can even subscribe to a Package after the registration.
+* Restrict Page/ Post contents from general members of the site. Only subscribed members will be able to access these pages. you can restrict pages form post edit section.
+* Configure payment options for users to purchase a package. PayPal Standard, PayPal Advanced (Credit/ Debit Card) payment methods are available by default.
+
+<a href="http://aviplugins.com/wp-user-subscription/" target="_blank">Click here</a> to get full details about the plugin. This plugin is available for <strong>USD 2.50</strong>.
+
+> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Custom Post Type Attachment PRO</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Contact Form With Shortcode PRO</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
 
 == Installation ==
 
@@ -71,8 +82,8 @@ If you want to translate the plugin in your language please translate the sample
 
 == Changelog ==
 
-= 2.1.1 =
-* Notice message bug fixed.
+= 2.2.0 =
+* Code updated to make this plugin compatible with <a href="http://aviplugins.com/wp-user-subscription/">WP User Subscription</a> plugin.
 
 = 2.1.0 =
 * The plugin is now Multilingual.
@@ -86,5 +97,5 @@ If you want to translate the plugin in your language please translate the sample
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1 =
 I will update this plugin when ever it is required.
