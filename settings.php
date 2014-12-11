@@ -225,7 +225,7 @@ class register_settings {
 	function wp_register_pro_add(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
   <tr>
-    <td><p>There is a PRO version of this plugin that supports custom user profile fields and other additional options. You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong> </p></td>
+    <td><p>There is a PRO version of this plugin that supports custom user profile fields and other additional options. You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 2.00</strong> </p></td>
   </tr>
 </table>
 	<?php }
