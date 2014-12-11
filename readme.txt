@@ -40,7 +40,7 @@ There is a <a href="http://aviplugins.com/wp-register-profile-pro/" target="_bla
 * Support for user profile image upload.
 * Profile image can be used as avatar. If this is enabled then profile image will be used as user avatar throughout the site. When user posts a comment his profile image will be displayed instead of the defalut wordpress avatar.
 
-You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
+You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
 
 = WP User Subscription =
 Get paid when user registers in your site. <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">WP User Subscription</a> plugin can be used with <a target="_blank" href="https://wordpress.org/plugins/wp-register-profile-with-shortcode/">WP Register Profile With Shortcode</a>, <a target="_blank" href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a> or separetly or with other plugins also.
