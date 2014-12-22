@@ -45,8 +45,8 @@ You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="
 = WP User Subscription =
 Get paid when user registers in your site. <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">WP User Subscription</a> plugin can be used with <a target="_blank" href="https://wordpress.org/plugins/wp-register-profile-with-shortcode/">WP Register Profile With Shortcode</a>, <a target="_blank" href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a> or separetly or with other plugins also.
 
-* Create Subscription Packages for users. Create Paid/ Free packages with validity of the package. 
-* Display subscription package using Shortcodes.
+* Create Subscription Packages for users. Create Paid/ Free packages with validity of the subscription.
+* Display subscription packages using Shortcodes. So that users can choose from different packages. 
 * Let users subscribe for Paid/ Free Subscription Packages at the time of registration. Users can even subscribe to a Package after the registration.
 * Restrict Page/ Post contents from general members of the site. Only subscribed members will be able to access these pages. you can restrict pages form post edit section.
 * Configure payment options for users to purchase a package. PayPal Standard, PayPal Advanced (Credit/ Debit Card) payment methods are available by default.
