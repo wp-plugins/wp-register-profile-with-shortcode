@@ -1,4 +1,4 @@
-msgid "This is a simple login form in the widget."
+msgid "This is a simple register form in the widget."
 msgstr "Dette er et simpelt login-formular i widget."
 
 msgid "Username"
