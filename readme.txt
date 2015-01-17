@@ -23,9 +23,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 4. Use this <strong>[rp_update_password]</srong> shortcode to display Update Password form in your page.
 
 = Other Optional Options =
-* You can choose the redirect page after successfull registration. Maybe to a thankyou page.
-* Enable password fields so that users can choose there own passwords.
-* Enable some additional fields like first name, last name, display name, user url etc..
+* Redirect users to a chosen page after successfull registration. Maybe to a thankyou page.
+* Enable password fields so that users can choose there own passwords. Otherwise password will be auto generated an d mailed to user.
+* Enable some additional fields in the registration form like first name, last name, display name, user url etc..
+* Custom Registration/ Profile fields can be created in the <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">PRO</a> version of the plugin.
 
 
 
@@ -53,7 +54,7 @@ Get paid when user registers in your site. <a href="http://aviplugins.com/wp-use
 
 <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">Click here</a> to get full details about the plugin. This plugin is available for <strong>USD 2.50</strong>.
 
-> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Custom Post Type Attachment PRO</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Contact Form With Shortcode PRO</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
+> Checkout other plugins <a href="http://aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Custom Post Type Attachment PRO</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Contact Form With Shortcode PRO</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
 
 == Installation ==
 
