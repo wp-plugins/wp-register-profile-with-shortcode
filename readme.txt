@@ -34,7 +34,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 There is a <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">PRO</a> version of this plugin that supports more feathres like. 
 
 * Registration form with support for adding custom fields.
-* Custom registration form fields can be sorted by Drag & Drop.
+* Custom registration form fields can be sorted by <strong>Drag & Drop</strong>.
 * User Profile page with custom fields. Here users can update their profile data.
 * Create file type fields for Registration and Profile forms. Users can upload files to their profile. Uploadable file types can be selected form plugin settings page.
 * User password update.
