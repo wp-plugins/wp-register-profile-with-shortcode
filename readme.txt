@@ -33,7 +33,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 = WP Register Profile PRO =
 There is a <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">PRO</a> version of this plugin that supports more feathres like. 
 
-* Regstration form with support for adding custom fields.
+* Registration form with support for adding custom fields.
+* Custom registration form fields can be sorted by Drag & Drop.
 * User Profile page with custom fields. Here users can update their profile data.
 * Create file type fields for Registration and Profile forms. Users can upload files to their profile. Uploadable file types can be selected form plugin settings page.
 * User password update.
@@ -44,7 +45,7 @@ There is a <a href="http://aviplugins.com/wp-register-profile-pro/" target="_bla
 You can get it <a href="http://aviplugins.com/wp-register-profile-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
 
 = WP User Subscription =
-Get paid when user registers in your site. <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">WP User Subscription</a> plugin can be used with <a target="_blank" href="https://wordpress.org/plugins/wp-register-profile-with-shortcode/">WP Register Profile With Shortcode</a>, <a target="_blank" href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a> or separetly or with other plugins also.
+Get paid when users register in your site. <a href="http://aviplugins.com/wp-user-subscription/" target="_blank">WP User Subscription</a> plugin can be used with <a target="_blank" href="https://wordpress.org/plugins/wp-register-profile-with-shortcode/">WP Register Profile With Shortcode</a>, <a target="_blank" href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a> or separetly or with other plugins also.
 
 * Create Subscription Packages for users. Create Paid/ Free packages with validity of the subscription.
 * Display subscription packages using Shortcodes. So that users can choose from different packages. 
