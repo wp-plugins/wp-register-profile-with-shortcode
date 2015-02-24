@@ -1,5 +1,5 @@
-msgid "This is a simple login form in the widget."
-msgstr "Esta es una forma de registro simple en el widget."
+msgid "This is a simple register form in the widget."
+msgstr "Esta es una forma simple registro en el widget."
 
 msgid "Username"
 msgstr "Nombre de usuario"
@@ -34,6 +34,15 @@ msgstr "Registro"
 msgid "Sorry. Registration is not allowed in this site."
 msgstr "Lo siento. El registro no est&aacute; permitido en este sitio."
 
+msgid "Registration Successfull"
+msgstr "registro de &eacute;xito"
+
+msgid "Thankyou for registration"
+msgstr "Gracias por registro"
+
+msgid "Site Link"
+msgstr "sitio Enlace"
+
 msgid "Username already exists. Please use a different one!"
 msgstr "Nombre de usuario ya existe. Por favor, use uno diferente!"
 
@@ -60,3 +69,6 @@ msgstr "Su contrase&ntilde;a ha actualizado correctamente."
 
 msgid "New Password"
 msgstr "Lo siento. ning&uacute;n usuario ha sido encontrado!"
+
+msgid "Profile data updated successfully."
+msgstr "Datos del perfil actualizado correctamente ."

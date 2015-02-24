@@ -4,7 +4,7 @@ Donate link: aviplugins.com/donate
 Tags: register, responsive user registration, wp register, profile, register widget, widget, user register, register user, responsive form, responsive register form, custom fields, profile image, date, time, user image, custom profile fields, profile data
 Requires at least: 2.0.2
 Tested up to: 4.1
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,9 @@ If you want to translate the plugin in your language please translate the sample
 
 
 == Changelog ==
+
+= 2.2.1 =
+* Translation text updated.
 
 = 2.2.0 =
 * Code updated to make this plugin compatible with <a href="http://aviplugins.com/wp-user-subscription/">WP User Subscription</a> plugin.

@@ -162,14 +162,17 @@ class register_wid extends WP_Widget {
 		// insert new user in db //
 		
 		// send mail to user //
-		$subject = 'Registration Successfull';
-		$body = 'Thankyou for registration<br><br>
+		$subject = __('Registration Successfull','rwa');
+		$body = __('Thankyou for registration','rwa').'<br><br>
 		
-				Username : '.$userdata['user_login'].'<br>
-				Password : '.$userdata['user_pass'].'<br>
-				Site Link : '.site_url().'<br>
+				'.__('Username','rwa').' : '.$userdata['user_login'].'<br>
+				'.__('Password','rwa').' : '.$userdata['user_pass'].'<br>
+				'.__('Site Link','rwa').' : '.site_url().'<br>
 		';
 		
+		
+		echo $body;
+		exit;
 		
 		$to_array = array($_POST['user_email']);
 		add_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );

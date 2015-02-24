@@ -35,7 +35,7 @@ class profile_edit_afo{
 			$error = false;
 			
 			if(!is_user_logged_in()){
-				$msg = 'Login to update profile!';
+				$msg = __('Login to update profile!','rwa');
 				$error = true;
 			}
 			
@@ -73,7 +73,7 @@ class profile_edit_afo{
 					$user_id = wp_update_user( $userdata );
 				// update user profile in db //
 				
-				$_SESSION['reg_error_msg'] = "Profile data updated successfully.";
+				$_SESSION['reg_error_msg'] = __('Profile data updated successfully.','rwa');
 				$_SESSION['reg_msg_class'] = 'reg_success';
 				
 			} else {
