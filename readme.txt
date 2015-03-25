@@ -57,6 +57,8 @@ Get paid when users register in your site. <a href="http://aviplugins.com/wp-use
 
 > Checkout other plugins <a href="http://aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile PRO</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Custom Post Type Attachment PRO</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Contact Form With Shortcode PRO</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
 
+> Post your plugin related queries at <a href="http://aviplugins.com/support.php">http://aviplugins.com/support.php</a>
+
 == Installation ==
 
 
