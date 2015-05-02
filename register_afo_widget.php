@@ -62,75 +62,72 @@ class register_wid extends WP_Widget {
 
 		$this->error_message();
 		if(!is_user_logged_in()){
+			if(get_option('users_can_register')) {  
 		?>
 		<form name="register" id="register" method="post" action="" enctype="multipart/form-data">
 		<input type="hidden" name="option" value="afo_user_register" />
 		<div id="reg_forms">
 			
-			<div>
-			<label for="name"><?php _e('Username','rwa');?> </label>
-			<div><input type="text" name="user_login" required="required" placeholder="<?php _e('Username','rwa');?>"/></div>
+			<div class="form-group">
+				<label for="username"><?php _e('Username','rwa');?> </label>
+				<input type="text" name="user_login" required="required" placeholder="<?php _e('Username','rwa');?>"/>
 			</div>
 			
-			<div>
-			<label for="name"><?php _e('User Email','rwa');?> </label>
-			<div><input type="email" name="user_email" required="required" placeholder="<?php _e('User Email','rwa');?>"/></div>
+			<div class="form-group">
+				<label for="useremail"><?php _e('User Email','rwa');?> </label>
+				<input type="email" name="user_email" required="required" placeholder="<?php _e('User Email','rwa');?>"/>
 			</div>
 			
 			<?php if($this->is_field_enabled('password_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('Password','rwa');?> </label>
-			<div><input type="password" name="new_user_password" required="required" placeholder="<?php _e('Password','rwa');?>" /></div>
+			<div class="form-group">
+			<label for="password"><?php _e('Password','rwa');?> </label>
+			<input type="password" name="new_user_password" required="required" placeholder="<?php _e('Password','rwa');?>" />
 			</div>
 			
-			<div>
-			<label for="name"><?php _e('Retype Password','rwa');?> </label>
-			<div><input type="password" name="re_user_password" required="required" placeholder="<?php _e('Retype Password','rwa');?>"/></div>
+			<div class="form-group">
+			<label for="retypepassword"><?php _e('Retype Password','rwa');?> </label>
+			<input type="password" name="re_user_password" required="required" placeholder="<?php _e('Retype Password','rwa');?>"/>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('firstname_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('First Name','rwa');?> </label>
-			<div><input type="text" name="first_name" <?php echo $this->is_field_required('is_firstname_required');?> placeholder="<?php _e('First Name','rwa');?>"/></div>
+			<div class="form-group">
+			<label for="firstname"><?php _e('First Name','rwa');?> </label>
+			<input type="text" name="first_name" <?php echo $this->is_field_required('is_firstname_required');?> placeholder="<?php _e('First Name','rwa');?>"/>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('lastname_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('Last Name','rwa');?> </label>
-			<div><input type="text" name="last_name" <?php echo $this->is_field_required('is_lastname_required');?> placeholder="<?php _e('Last Name','rwa');?>"/></div>
+			<div class="form-group">
+			<label for="lastname"><?php _e('Last Name','rwa');?> </label>
+			<input type="text" name="last_name" <?php echo $this->is_field_required('is_lastname_required');?> placeholder="<?php _e('Last Name','rwa');?>"/>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('displayname_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('Display Name','rwa');?> </label>
-			<div><input type="text" name="display_name" <?php echo $this->is_field_required('is_displayname_required');?> placeholder="<?php _e('Display Name','rwa');?>"/></div>
+			<div class="form-group">
+			<label for="displayname"><?php _e('Display Name','rwa');?> </label>
+			<input type="text" name="display_name" <?php echo $this->is_field_required('is_displayname_required');?> placeholder="<?php _e('Display Name','rwa');?>"/>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userdescription_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('About User','rwa');?> </label>
-			<div><textarea name="description" <?php echo $this->is_field_required('is_userdescription_required');?>></textarea></div>
+			<div class="form-group">
+			<label for="aboutuser"><?php _e('About User','rwa');?> </label>
+			<textarea name="description" <?php echo $this->is_field_required('is_userdescription_required');?>></textarea>
 			</div>
 			<?php } ?>
 			
 			<?php if($this->is_field_enabled('userurl_in_registration')){ ?>
-			<div>
-			<label for="name"><?php _e('Website','rwa');?> </label>
-			<div><input type="url" name="user_url" <?php echo $this->is_field_required('is_userurl_required');?> placeholder="<?php _e('Website','rwa');?>"/></div>
+			<div class="form-group">
+			<label for="website"><?php _e('Website','rwa');?> </label>
+			<input type="url" name="user_url" <?php echo $this->is_field_required('is_userurl_required');?> placeholder="<?php _e('Website','rwa');?>"/>
 			</div>
 			<?php } ?>
 			
 			<?php do_action('wp_register_profile_subscription'); ?>
 			
-			<div>
-			<div>
-			<input name="register" type="submit" value="<?php _e('Register','rwa');?>" />
-			</div>
-			</div>
+			<div class="form-group"><input name="register" type="submit" value="<?php _e('Register','rwa');?>" /></div>
 
 		</div>
 		</form>
@@ -138,6 +135,7 @@ class register_wid extends WP_Widget {
 		<?php 
 		} else {
 			echo '<div id="reg_forms"><p>'.__('Sorry. Registration is not allowed in this site.','rwa').'</p></div>';
+		}
 		}
 	}
 	

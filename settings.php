@@ -219,7 +219,7 @@ class register_settings {
 	}
 	
 	public function register_plugin_styles() {
-		wp_enqueue_style( 'style_register_widget', plugins_url( 'wp-register-profile/style_register_widget.css' ) );
+		wp_enqueue_style( 'style_register_widget', plugins_url( 'wp-register-profile-with-shortcode/style_register_widget.css' ) );
 	}
 
 	function wp_register_pro_add(){ ?>

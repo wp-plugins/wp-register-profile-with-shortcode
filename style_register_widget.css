@@ -40,8 +40,6 @@
 padding:8px;
 }
 
-
-
 div#reg_forms{
 margin:1%;
 }  
@@ -55,9 +53,10 @@ input[type=url],
 input[type=tel]
  {
 width:100%;
-  padding: 15px;
+  padding: 0.4583em;
  /* border-radius:5px;*/
   border:1px solid #CCCCCC;
+  margin-top:5px;
 }
 div#reg_forms textarea{
 	width:100%;
@@ -79,7 +78,7 @@ textarea:focus {
   border-color: #999999; 
 }
 
-div#reg_forms label{
+#reg_forms label{
 margin-left:0;
 }
 
@@ -107,7 +106,7 @@ input[type=url],
 input[type=tel]
  {
 width:100%;
-  padding: 15px;
+  padding: 0.4583em;
   /*border-radius:5px;*/
   border:1px solid #7ac9b7;
 }
@@ -130,9 +129,6 @@ input[type=tel]:focus,
 textarea:focus {
 
   border-color: #4697e4;
-}
-div#reg_forms label{
-margin-left:0;
 }
 
 
