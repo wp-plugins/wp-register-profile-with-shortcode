@@ -64,7 +64,14 @@ div#reg_forms textarea{
 	/*border-radius:5px */
   }
 
-
+div#reg_forms select{
+	width:100%;
+     padding: 0.4583em;
+ /* border-radius:5px;*/
+  border:1px solid #CCCCCC;
+  margin-top:5px;
+  }
+  
 div#reg_forms div{
   padding:10px 0;
 }
