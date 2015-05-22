@@ -168,7 +168,7 @@ class register_wid extends WP_Widget {
 				'.__('Site Link','rwa').' : '.site_url().'<br>
 		';
 		
-		$to_array = array($_POST['user_email']);
+		$to_array = array($userdata['user_email']);
 		add_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
 		wp_mail( $to_array, $subject, $body );
 		remove_filter( 'wp_mail_content_type', array($this, 'set_html_content_type') );
