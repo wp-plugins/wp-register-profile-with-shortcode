@@ -32,6 +32,8 @@ class register_settings {
 			update_option( 'userurl_in_profile', sanitize_text_field($_POST['userurl_in_profile']) );
 			update_option( 'is_userurl_required', sanitize_text_field($_POST['is_userurl_required']) );
 			
+			update_option( 'captcha_in_registration', sanitize_text_field($_POST['captcha_in_registration']) );
+			
 			$_SESSION['msg'] = 'Plugin data updated successfully.';
 			$_SESSION['msg_class'] = 'success_msg_rp';
 		}
@@ -75,6 +77,8 @@ class register_settings {
 	$userurl_in_registration = get_option( 'userurl_in_registration' );
 	$userurl_in_profile = get_option( 'userurl_in_profile' );
 	$is_userurl_required = get_option( 'is_userurl_required' );
+	
+	$captcha_in_registration = get_option( 'captcha_in_registration' );
 	
 	$this->donate_form_register();
 	$this->wp_register_pro_add();
@@ -163,15 +167,40 @@ class register_settings {
 				<td><input type="checkbox" name="userurl_in_registration" value="Yes" <?php echo $userurl_in_registration == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in registration form.</span></td>
 				<td><input type="checkbox" name="userurl_in_profile" value="Yes" <?php echo $userurl_in_profile == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in profile form.</span></td>
 			  </tr>
-			  <tr style="background-color:#FFFFFF;">
-				<td colspan="4"><input type="submit" name="submit" value="Save" class="button button-primary button-large" /></td>
+              
+              
+              <tr style="background-color:#FFFFFF;">
+				<td><strong>Use Captcha in Registration</strong></td>
+				<td align="center"><input type="checkbox" name="is_userurl_required" value="Yes" <?php echo $is_userurl_required == 'Yes'?'checked="checked"':'';?>/></td>
+				<td><input type="checkbox" name="userurl_in_registration" value="Yes" <?php echo $userurl_in_registration == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in registration form.</span></td>
+				<td><input type="checkbox" name="userurl_in_profile" value="Yes" <?php echo $userurl_in_profile == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in profile form.</span></td>
 			  </tr>
-			  
 			</table>
 
 		</td>
 	  </tr>
-	  
+      
+      <tr>
+		<td colspan="2">
+       	 <table width="100%" border="0" style="background-color:#FFFFFF; padding:10px; border:1px dotted #999999;">
+         	  <tr>
+				<td>Use CAPTCHA in Registration Form <input type="checkbox" name="captcha_in_registration" value="Yes" <?php echo $captcha_in_registration == 'Yes'?'checked="checked"':'';?>/></td>
+			  </tr>
+			</table>
+		</td>
+	  </tr>
+      
+      
+      <tr>
+		<td colspan="2">
+       	 <table width="100%" border="0" style="background-color:#FFFFFF; padding:10px; border:1px dotted #999999;">
+			  <tr>
+				<td><input type="submit" name="submit" value="Save" class="button button-primary button-large" /></td>
+			  </tr>
+			</table>
+		</td>
+	  </tr>
+      
 	   <tr>
 		<td colspan="2">
 			<table width="100%" border="0" style="background-color:#FFFFFF; padding:10px; border:1px dotted #999999;">

@@ -126,6 +126,14 @@ class register_wid extends WP_Widget {
 			<?php } ?>
 			
 			<?php do_action('wp_register_profile_subscription'); ?>
+            
+            <?php if($this->is_field_enabled('captcha_in_registration')){ ?>
+			<div class="form-group">
+			<label for="website"><?php _e('Captcha','rwa');?> </label>
+            <?php $this->captchaImage();?>
+			<input type="text" name="user_captcha" required="required"/>
+			</div>
+			<?php } ?>
 			
 			<div class="form-group"><input name="register" type="submit" value="<?php _e('Register','rwa');?>" /></div>
 
@@ -139,6 +147,17 @@ class register_wid extends WP_Widget {
 		}
 	}
 	
+	public function captchaImage(){
+	?>
+	<div>
+    <img src="<?php echo plugin_dir_url( __FILE__ ).'captcha/captcha.php';?>" id="captcha">
+	<br /><a href="javascript:refreshCaptcha();"><?php _e('Reload Image','rwa');?></a>
+	</div>
+    <script type="application/javascript">
+	function refreshCaptcha(){ document.getElementById('captcha').src = '<?php echo plugin_dir_url( __FILE__ ).'captcha/captcha.php'?>?rand='+Math.random(); }
+	</script>
+    <?php
+	}
 	
 	public function error_message(){
 		if(isset($_SESSION['reg_error_msg']) and $_SESSION['reg_error_msg']){
@@ -184,6 +203,14 @@ class register_wid extends WP_Widget {
 		if(isset($_POST['option']) and $_POST['option'] == "afo_user_register"){
 			global $post;
 			$error = false;
+			
+			if($this->is_field_enabled('captcha_in_registration')){ 
+				if ( $_POST['user_captcha'] != $_SESSION['captcha_code'] ){
+					$msg .= __('Security code do not match!','rwa');
+					$msg .= '</br>';
+					$error = true;
+				}
+			}
 			
 			if ( username_exists( $_POST['user_login'] ) ){
 				$msg .= __('Username already exists. Please use a different one!','rwa');
