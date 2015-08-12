@@ -167,14 +167,6 @@ class register_settings {
 				<td><input type="checkbox" name="userurl_in_registration" value="Yes" <?php echo $userurl_in_registration == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in registration form.</span></td>
 				<td><input type="checkbox" name="userurl_in_profile" value="Yes" <?php echo $userurl_in_profile == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in profile form.</span></td>
 			  </tr>
-              
-              
-              <tr style="background-color:#FFFFFF;">
-				<td><strong>Use Captcha in Registration</strong></td>
-				<td align="center"><input type="checkbox" name="is_userurl_required" value="Yes" <?php echo $is_userurl_required == 'Yes'?'checked="checked"':'';?>/></td>
-				<td><input type="checkbox" name="userurl_in_registration" value="Yes" <?php echo $userurl_in_registration == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in registration form.</span></td>
-				<td><input type="checkbox" name="userurl_in_profile" value="Yes" <?php echo $userurl_in_profile == 'Yes'?'checked="checked"':'';?>/><span>Check this to enable user url in profile form.</span></td>
-			  </tr>
 			</table>
 
 		</td>
